@@ -12,7 +12,7 @@ form.addEventListener('input', event => {
   const email = form.elements.email.value.trim();
   const message = form.elements.message.value.trim();
   const formSavedObj = { email, message };
-  localStorage.setItem('localStorageKey', JSON.stringify(formSavedObj));
+  localStorage.setItem(localStorageKey, JSON.stringify(formSavedObj));
 });
 
 form.addEventListener('submit', event => {
@@ -25,6 +25,6 @@ form.addEventListener('submit', event => {
   }
 
   console.log({ email, message });
-  localStorage.removeItem('localStorageKey');
+  localStorage.removeItem(localStorageKey);
   form.reset();
 });
